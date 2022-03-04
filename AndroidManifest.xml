@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="31" android:compileSdkVersionCodename="12" android:installLocation="internalOnly" android:versionCode="29300000" android:versionName="9.30.0-release.0" package="com.twitter.android" platformBuildVersionCode="31" platformBuildVersionName="12">
 	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="31" />
 	<permission android:name="com.twitter.android.permission.RESTRICTED" android:protectionLevel="signature" />
-	<uses-permission android:name="com.twitter.android.permission.RESTRICTED" />
+	<uses-permission android:name="com.jetpack.android.permission.RESTRICTED" />
 	<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.VIBRATE" />
@@ -255,73 +255,73 @@
 			</intent-filter>
 		</activity>
 		<activity android:name="com.twitter.app.settings.RemoveContactsActivity" android:noHistory="true" android:theme="@style/Theme.Dialog.NoTitleBar" />
-		<activity android:excludeFromRecents="true" android:label="@string/settings_security_account_access_item_title" android:name="com.twitter.app.settings.SecurityRootCompatActivity" android:theme="@style/DisableableSettingsTheme" />
-		<activity android:excludeFromRecents="true" android:label="@string/settings_connected_accounts_item_title" android:name="com.twitter.app.settings.connectedaccounts.ConnectedAccountsSettingsActivity" android:theme="@style/DisableableSettingsTheme" />
+		<activity android:excludeFromRecents="true" android:label="@string/settings_security_account_access_item_title" android:name="com.jetpack.app.settings.SecurityRootCompatActivity" android:theme="@style/DisableableSettingsTheme" />
+		<activity android:excludeFromRecents="true" android:label="@string/settings_connected_accounts_item_title" android:name="com.jetpack.app.settings.connectedaccounts.ConnectedAccountsSettingsActivity" android:theme="@style/DisableableSettingsTheme" />
 		<activity android:excludeFromRecents="true" android:label="@string/settings_account_item_title" android:name="com.twitter.app.settings.YourAccountRootCompatActivity" android:theme="@style/DisableableSettingsTheme" />
-		<activity android:excludeFromRecents="true" android:label="@string/settings_privacy_and_safety_title" android:name="com.twitter.app.settings.PrivacyAndSafetyRootCompatActivity" android:theme="@style/DisableableSettingsTheme" />
-		<activity android:excludeFromRecents="true" android:label="@string/settings_notifications_title" android:name="com.twitter.app.settings.NotificationsRootCompatActivity" android:theme="@style/DisableableSettingsTheme" />
-		<activity android:excludeFromRecents="true" android:label="@string/settings_accessibility_display_languages_title" android:name="com.twitter.app.settings.AccessibilityDisplayRootCompatActivity" android:theme="@style/DisableableSettingsTheme" />
-		<activity android:excludeFromRecents="true" android:label="@string/settings_notifications_timeline" android:name="com.twitter.app.settings.NotificationSettingsActivity" />
-		<activity android:excludeFromRecents="true" android:label="@string/safety_mode" android:name="com.twitter.app.settings.SafetyModeSettingsActivity" android:theme="@style/DisableableSettingsTheme" />
-		<activity android:excludeFromRecents="true" android:label="@string/settings_mute_block_item_title" android:name="com.twitter.app.settings.MuteAndBlockSettingsActivity" />
-		<activity android:excludeFromRecents="true" android:label="@string/settings_audience_item_title" android:name="com.twitter.app.settings.AudienceAndTaggingSettingsActivity" />
-		<activity android:excludeFromRecents="true" android:label="@string/settings_location_info_item_title" android:name="com.twitter.app.settings.LocationInformationSettingsActivity" />
-		<activity android:excludeFromRecents="true" android:label="@string/settings_account_information_item_title" android:name="com.twitter.app.settings.AccountInformationActivity" />
-		<activity android:excludeFromRecents="true" android:label="@string/automation" android:name="com.twitter.app.settings.accounttaxonomy.AccountAutomationActivity" />
-		<activity android:excludeFromRecents="true" android:label="@string/settings_business_partners_title" android:name="com.twitter.app.settings.DataSharingActivity" />
-		<activity android:excludeFromRecents="true" android:label="@string/settings_ads_prefs_item_title" android:name="com.twitter.app.settings.AdsPreferencesSettingsActivity" />
-		<activity android:excludeFromRecents="true" android:label="@string/settings_off_twitter_activity_item_title" android:name="com.twitter.app.settings.OffTwitterSettingsActivity" />
-		<activity android:excludeFromRecents="true" android:label="@string/settings_your_tweets_item_title" android:name="com.twitter.app.settings.YourTweetsSettingsActivity" />
-		<activity android:excludeFromRecents="true" android:label="@string/settings_content_you_see_item_title" android:name="com.twitter.app.settings.ContentYouSeeActivity" />
-		<activity android:excludeFromRecents="true" android:label="@string/settings_languages_item_title" android:name="com.twitter.app.settings.LanguagesSettingsActivity" />
-		<activity android:excludeFromRecents="true" android:label="@string/settings_category_discoverability_and_contacts_title" android:name="com.twitter.app.settings.DiscoverabilityAndContactsActivity" />
-		<activity android:excludeFromRecents="true" android:label="@string/settings_category_audiospace_title" android:name="com.twitter.app.settings.AudioSpacesPrivacySettingsActivity" />
-		<activity android:excludeFromRecents="true" android:label="@string/settings_app_language_title" android:name="com.twitter.app.settings.language.AppLanguageSettingsActivity" />
-		<activity android:excludeFromRecents="true" android:label="@string/settings_security_title" android:name="com.twitter.app.settings.TwoFactorAuthSettingsActivity" android:theme="@style/Theme.TwoFactorTheme" />
+		<activity android:excludeFromRecents="true" android:label="@string/settings_privacy_and_safety_title" android:name="com.jetpack.app.settings.PrivacyAndSafetyRootCompatActivity" android:theme="@style/DisableableSettingsTheme" />
+		<activity android:excludeFromRecents="true" android:label="@string/settings_notifications_title" android:name="com.jetpack.app.settings.NotificationsRootCompatActivity" android:theme="@style/DisableableSettingsTheme" />
+		<activity android:excludeFromRecents="true" android:label="@string/settings_accessibility_display_languages_title" android:name="com.jetpack.app.settings.AccessibilityDisplayRootCompatActivity" android:theme="@style/DisableableSettingsTheme" />
+		<activity android:excludeFromRecents="true" android:label="@string/settings_notifications_timeline" android:name="com.jetpack.app.settings.NotificationSettingsActivity" />
+		<activity android:excludeFromRecents="true" android:label="@string/safety_mode" android:name="com.jetpack.app.settings.SafetyModeSettingsActivity" android:theme="@style/DisableableSettingsTheme" />
+		<activity android:excludeFromRecents="true" android:label="@string/settings_mute_block_item_title" android:name="com.jetpack.app.settings.MuteAndBlockSettingsActivity" />
+		<activity android:excludeFromRecents="true" android:label="@string/settings_audience_item_title" android:name="com.jetpack.app.settings.AudienceAndTaggingSettingsActivity" />
+		<activity android:excludeFromRecents="true" android:label="@string/settings_location_info_item_title" android:name="com.jetpack.app.settings.LocationInformationSettingsActivity" />
+		<activity android:excludeFromRecents="true" android:label="@string/settings_account_information_item_title" android:name="com.jetpack.app.settings.AccountInformationActivity" />
+		<activity android:excludeFromRecents="true" android:label="@string/automation" android:name="com.jetpack.app.settings.accounttaxonomy.AccountAutomationActivity" />
+		<activity android:excludeFromRecents="true" android:label="@string/settings_business_partners_title" android:name="com.jetpack.app.settings.DataSharingActivity" />
+		<activity android:excludeFromRecents="true" android:label="@string/settings_ads_prefs_item_title" android:name="com.jetpack.app.settings.AdsPreferencesSettingsActivity" />
+		<activity android:excludeFromRecents="true" android:label="@string/settings_off_twitter_activity_item_title" android:name="com.jetpack.app.settings.OffTwitterSettingsActivity" />
+		<activity android:excludeFromRecents="true" android:label="@string/settings_your_tweets_item_title" android:name="com.jetpack.app.settings.YourTweetsSettingsActivity" />
+		<activity android:excludeFromRecents="true" android:label="@string/settings_content_you_see_item_title" android:name="com.jetpack.app.settings.ContentYouSeeActivity" />
+		<activity android:excludeFromRecents="true" android:label="@string/settings_languages_item_title" android:name="com.jetpack.app.settings.LanguagesSettingsActivity" />
+		<activity android:excludeFromRecents="true" android:label="@string/settings_category_discoverability_and_contacts_title" android:name="com.jetpack.app.settings.DiscoverabilityAndContactsActivity" />
+		<activity android:excludeFromRecents="true" android:label="@string/settings_category_audiospace_title" android:name="com.jetpack.app.settings.AudioSpacesPrivacySettingsActivity" />
+		<activity android:excludeFromRecents="true" android:label="@string/settings_app_language_title" android:name="com.jetpack.app.settings.language.AppLanguageSettingsActivity" />
+		<activity android:excludeFromRecents="true" android:label="@string/settings_security_title" android:name="com.jetpack.app.settings.TwoFactorAuthSettingsActivity" android:theme="@style/Theme.TwoFactorTheme" />
 		<activity android:name="com.twitter.app.settings.SettingsSearchResultsActivity" />
-		<activity android:excludeFromRecents="true" android:label="@string/settings_translations_language_title" android:name="com.twitter.settings.autotranslation.AutoTranslationSettingsActivity" android:windowSoftInputMode="adjustResize" />
-		<activity android:excludeFromRecents="true" android:label="@string/settings_security_title" android:name="com.twitter.app.settings.SecuritySettingsActivity" />
+		<activity android:excludeFromRecents="true" android:label="@string/settings_translations_language_title" android:name="com.jetpack.settings.autotranslation.AutoTranslationSettingsActivity" android:windowSoftInputMode="adjustResize" />
+		<activity android:excludeFromRecents="true" android:label="@string/settings_security_title" android:name="com.jetpack.app.settings.SecuritySettingsActivity" />
 		<activity android:name="com.twitter.longform.threadreader.ReaderModeTimelineActivity" android:theme="@style/Theme" android:windowSoftInputMode="adjustResize" />
-		<activity android:exported="false" android:name="com.twitter.android.unifiedlanding.implementation.UnifiedLandingActivity" />
-		<activity-alias android:enabled="true" android:exported="true" android:name="com.twitter.android.unifiedlanding.implementation.UnifiedLandingActivity" android:targetActivity="com.twitter.android.unifiedlanding.implementation.UnifiedLandingActivity" />
-		<activity android:exported="false" android:name="com.twitter.android.topics.peek.activity.TopicPeekActivity" android:theme="@style/TopicPeekTheme" />
+		<activity android:exported="false" android:name="com.jetpack.android.unifiedlanding.implementation.UnifiedLandingActivity" />
+		<activity-alias android:enabled="true" android:exported="true" android:name="com.jetpack.android.unifiedlanding.implementation.UnifiedLandingActivity" android:targetActivity="com.twitter.android.unifiedlanding.implementation.UnifiedLandingActivity" />
+		<activity android:exported="false" android:name="com.jetpack.android.topics.peek.activity.TopicPeekActivity" android:theme="@style/TopicPeekTheme" />
 		<activity-alias android:enabled="true" android:exported="true" android:name="com.twitter.android.topics.peek.activity.TopicPeekActivity" android:targetActivity="com.twitter.android.topics.peek.activity.TopicPeekActivity" />
 		<activity android:label="@string/topic_activity_title" android:name="com.twitter.android.topics.management.urp.UserFollowedTopicsURPActivity" />
 		<activity android:name="com.twitter.android.topics.management.TopicManagementActivity" />
-		<activity android:label="@string/topic_activity_title" android:name="com.twitter.android.topics.management.urp.TopicsManagementURPActivity" />
-		<activity android:label="@string/topic_picker_title" android:name="com.twitter.android.topics.picker.TopicsPickerActivity" />
+		<activity android:label="@string/topic_activity_title" android:name="com.jetpack.android.topics.management.urp.TopicsManagementURPActivity" />
+		<activity android:label="@string/topic_picker_title" android:name="com.jetpack.android.topics.picker.TopicsPickerActivity" />
 		<activity android:name="com.twitter.tweetdetail.TweetDetailActivity" android:parentActivityName="com.twitter.app.main.MainActivity" android:theme="@style/Theme" android:windowSoftInputMode="adjustResize" />
-		<activity android:excludeFromRecents="true" android:label="@string/change_screen_name" android:name="com.twitter.android.ChangeScreenNameActivity" android:windowSoftInputMode="adjustResize" />
-		<activity android:launchMode="singleTop" android:name="com.twitter.app.main.MainActivity" android:theme="@style/Theme.Main" android:windowSoftInputMode="adjustResize" />
+		<activity android:excludeFromRecents="true" android:label="@string/change_screen_name" android:name="com.jetpack.android.ChangeScreenNameActivity" android:windowSoftInputMode="adjustResize" />
+		<activity android:launchMode="singleTop" android:name="com.jetpack.app.main.MainActivity" android:theme="@style/Theme.Main" android:windowSoftInputMode="adjustResize" />
 		<activity android:name="com.twitter.app.users.UsersActivity" />
-		<activity android:label="@string/block_list" android:name="com.twitter.app.users.BlockedUsersActivity" android:theme="@style/Theme.NoToolbarShadowAndElevation" />
-		<activity android:label="@string/mute_list" android:name="com.twitter.app.users.MutedUsersActivity" />
-		<activity android:name="com.twitter.android.account.teamsaccountswitcher.TeamsAccountSwitcherActivity" />
-		<activity android:name="com.twitter.android.TotpGeneratorActivity" android:parentActivityName="com.twitter.app.main.MainActivity">
+		<activity android:label="@string/block_list" android:name="com.jetpack.app.users.BlockedUsersActivity" android:theme="@style/Theme.NoToolbarShadowAndElevation" />
+		<activity android:label="@string/mute_list" android:name="com.jetpack.app.users.MutedUsersActivity" />
+		<activity android:name="com.jetpack.android.account.teamsaccountswitcher.TeamsAccountSwitcherActivity" />
+		<activity android:name="com.jetpack.android.TotpGeneratorActivity" android:parentActivityName="com.twitter.app.main.MainActivity">
 			<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.twitter.app.main.MainActivity" />
 		</activity>
-		<activity android:name="com.twitter.android.BackupCodeActivity" />
-		<activity android:name="com.twitter.android.TemporaryAppPasswordActivity" />
-		<activity android:name="com.twitter.android.TabbedVitFollowersActivity" />
-		<activity android:name="com.twitter.android.revenue.brandsurvey.BrandSurveyQuestionActivity" android:screenOrientation="portrait" />
-		<activity android:label="@string/settings_category_dm_title" android:name="com.twitter.android.settings.dm.DMSettingsActivity" />
-		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.twitter.android.EditProfileActivity" android:windowSoftInputMode="adjustResize|stateHidden" />
-		<activity android:name="com.twitter.android.EditProfileAvatarActivity" android:theme="@style/Theme.Transparent.TransparentStatusBar" />
+		<activity android:name="com.jetpack.android.BackupCodeActivity" />
+		<activity android:name="com.jetpack.android.TemporaryAppPasswordActivity" />
+		<activity android:name="com.jetpack.android.TabbedVitFollowersActivity" />
+		<activity android:name="com.jetpack.android.revenue.brandsurvey.BrandSurveyQuestionActivity" android:screenOrientation="portrait" />
+		<activity android:label="@string/settings_category_dm_title" android:name="com.jetpack.android.settings.dm.DMSettingsActivity" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.jetpack.android.EditProfileActivity" android:windowSoftInputMode="adjustResize|stateHidden" />
+		<activity android:name="com.jetpack.android.EditProfileAvatarActivity" android:theme="@style/Theme.Transparent.TransparentStatusBar" />
 		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.twitter.android.EditBirthdateActivity" android:windowSoftInputMode="adjustResize|stateHidden" />
-		<activity android:excludeFromRecents="true" android:name="com.twitter.android.dialog.NotifyRetweetDialogFragmentActivity" android:theme="@style/Theme.Dialog.NoTitleBar" />
-		<activity android:excludeFromRecents="true" android:name="com.twitter.android.dialog.RateLimitDialogFragmentActivity" android:theme="@style/Theme.Dialog.NoTitleBar" />
-		<activity android:excludeFromRecents="true" android:name="com.twitter.android.dialog.LoggedOutSettingDialogFragmentActivity" android:theme="@style/Theme.Dialog.NoTitleBar" />
-		<activity android:excludeFromRecents="true" android:name="com.twitter.android.dialog.UpdatePhoneDialogActivity" android:theme="@style/Theme.Dialog.NoTitleBar" />
-		<activity android:excludeFromRecents="true" android:name="com.twitter.android.dialog.FollowingExceededDialogFragmentActivity" android:theme="@style/Theme.Dialog.NoTitleBar" />
-		<activity android:excludeFromRecents="true" android:name="com.twitter.android.dialog.ConversationControlReplyRestrictedDialogFragmentActivity" android:theme="@style/Theme.Dialog.NoTitleBar" />
+		<activity android:excludeFromRecents="true" android:name="com.jetpack.android.dialog.NotifyRetweetDialogFragmentActivity" android:theme="@style/Theme.Dialog.NoTitleBar" />
+		<activity android:excludeFromRecents="true" android:name="com.jetpack.android.dialog.RateLimitDialogFragmentActivity" android:theme="@style/Theme.Dialog.NoTitleBar" />
+		<activity android:excludeFromRecents="true" android:name="com.jetpack.android.dialog.LoggedOutSettingDialogFragmentActivity" android:theme="@style/Theme.Dialog.NoTitleBar" />
+		<activity android:excludeFromRecents="true" android:name="com.jetpack.android.dialog.UpdatePhoneDialogActivity" android:theme="@style/Theme.Dialog.NoTitleBar" />
+		<activity android:excludeFromRecents="true" android:name="com.jetpack.android.dialog.FollowingExceededDialogFragmentActivity" android:theme="@style/Theme.Dialog.NoTitleBar" />
+		<activity android:excludeFromRecents="true" android:name="com.jetpack.android.dialog.ConversationControlReplyRestrictedDialogFragmentActivity" android:theme="@style/Theme.Dialog.NoTitleBar" />
 		<activity android:name="com.twitter.android.DialogActivity" android:theme="@style/Theme.Dialog" />
-		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.twitter.android.analytics.TweetAnalyticsWebViewActivity" />
-		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.twitter.android.birdwatch.BirdwatchWebViewActivity" />
-		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.twitter.android.settings.UserTwitterDataWebViewActivity" />
-		<activity android:excludeFromRecents="true" android:name="com.twitter.android.RemoveAccountActivity" />
-		<activity android:excludeFromRecents="true" android:label="@string/deactivate_account" android:name="com.twitter.android.settings.DeactivateAccountActivity" android:windowSoftInputMode="adjustResize" />
-		<activity android:excludeFromRecents="true" android:label="@string/deactivate_account" android:name="com.twitter.android.settings.ConfirmDeactivateAccountActivity" android:windowSoftInputMode="adjustResize" />
-		<activity android:excludeFromRecents="true" android:label="@string/account_deactivated" android:name="com.twitter.android.settings.AccountDeactivatedActivity" android:windowSoftInputMode="adjustResize" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.jetpack.android.analytics.TweetAnalyticsWebViewActivity" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.jetpack.android.birdwatch.BirdwatchWebViewActivity" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.jetpack.android.settings.UserTwitterDataWebViewActivity" />
+		<activity android:excludeFromRecents="true" android:name="com.jetpack.android.RemoveAccountActivity" />
+		<activity android:excludeFromRecents="true" android:label="@string/deactivate_account" android:name="com.jetpack.android.settings.DeactivateAccountActivity" android:windowSoftInputMode="adjustResize" />
+		<activity android:excludeFromRecents="true" android:label="@string/deactivate_account" android:name="com.jetpack.android.settings.ConfirmDeactivateAccountActivity" android:windowSoftInputMode="adjustResize" />
+		<activity android:excludeFromRecents="true" android:label="@string/account_deactivated" android:name="com.jetpack.android.settings.AccountDeactivatedActivity" android:windowSoftInputMode="adjustResize" />
 		<activity android:name="com.twitter.android.trends.TrendsLocationsActivity" />
 		<activity android:name="com.twitter.android.settings.country.CountryListActivity" />
 		<activity android:excludeFromRecents="true" android:label="@string/settings_category_discoverability_and_contacts_title" android:name="com.twitter.android.settings.DiscoverabilityActivity" />
