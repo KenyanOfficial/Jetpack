@@ -1,11 +1,13 @@
 ## ☊ Jetpack ⬡⬡
 
-```
-☊Jetpack encompasses a collection 
-of Android libraries that incorporate 
-best practices and provide backwards 
-compatibility in your Android apps.
-```
+☊Jetpack - Javascript/Typescript WhatsApp Web API
+Jetpack does not require Selenium or any other 
+browser to be interface with WhatsApp Web, 
+it does so directly using a **WebSocket**. 
+Not running Selenium or Chromimum saves you 
+like **half a gig** of ram..!
+Jetpack supports Interaction with multi-device & web versions of WhatsApp.
+
 [![Generic badge](https://img.shields.io/badge/💠Plugins-red.svg)](https://github.com/GasComIT/Jetpack/tree/main/plugins) 
 [![Generic badge](https://img.shields.io/badge/🚀Jetpack-blue.svg)](https://github.com/gascomit/Jetpack)
 [![Generic badge](https://img.shields.io/badge/☸️WEBSITE-white.svg)](https://jetpack.gascomit.repl.co/)
