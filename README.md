@@ -22,7 +22,7 @@ Jetpack supports Interaction with multi-device & web versions of WhatsApp.
  If you're interested in building a WhatsApp bot, you may wanna check out [Vlkyre Bot](https://github.com/gascomit/Vlkyre) and an actual bot built with it, [Qtell Bot](https://github.com/gascomit/qtell).
  
 
-## Example
+### ☊ Example
 
 Do check out & run [example.ts](https://github.com/gascomit/blob/master/Example/example.ts) to see example usage of the library.
 The script covers most common use cases.
@@ -33,7 +33,7 @@ To run the example script, download or clone the repo and then type the followin
     - ``` yarn example ``` for the multi-device edition
     - ``` yarn example:legacy ``` for the legacy web edition
 
-## Install
+### ☊  Install
 
 Use the stable version:
 ```
@@ -53,11 +53,11 @@ import makeWASocket from '@gascomit/jetpack'
 import {makeWALegacySocket} from '@gascomit/jetpack'
 ```
 
-## Unit Tests
+### ☊  Unit Tests
 
 TODO
 
-## Connecting
+### ☊  Connecting
 
 ``` ts
 import makeWASocket, { DisconnectReason } from '@gascomit/jetpack'
@@ -96,15 +96,15 @@ If the connection is successful, you will see a QR code printed on your terminal
 
 **Note:** install `qrcode-terminal` using `yarn add qrcode-terminal` to auto-print the QR to the terminal.
 
-## Notable Differences Between Baileys v3 & v4
+### ☊  Notable Differences Between Baileys v3 & v4
 
-1. Jetoack has been written from the ground up to have a more "functional" structure. This is done primarily for simplicity & more testability
+1. Jetpack has been written from the ground up to have a more "functional" structure. This is done primarily for simplicity & more testability
 2. The Jetpack event emitter will emit all events and be used to generate a source of truth for the connected user's account. Access the event emitter using (`sock.ev`)
 3. Jetpack no longer maintains an internal state of chats/contacts/messages. You should ideally take this on your own, simply because your state in MD is its own source of truth & there is no one-size-fits-all way to handle the storage for this. However, a simple storage extension has been provided. This also serves as a good demonstration of how to use the Baileys event emitter to construct a source of truth.
-4. A baileys "socket" is meant to be a temporary & disposable object -- this is done to maintain simplicity & prevent bugs. I felt the entire Baileys object became too bloated as it supported too many configurations. You're encouraged to write your own implementation to handle missing functionality.
-5. Moreover,Jetpack does not offer an inbuilt reconnect mechanism anymore (though it's super easy to set one up on your own with your own rules, check the example script)
+4. A Jetpack "socket" is meant to be a temporary & disposable object -- this is done to maintain simplicity & prevent bugs. I felt the entire Baileys object became too bloated as it supported too many configurations. You're encouraged to write your own implementation to handle missing functionality.
+5. Moreover, Jetpack does not offer an inbuilt reconnect mechanism anymore (though it's super easy to set one up on your own with your own rules, check the example script)
 
-## Configuring the Connection
+### ☊ Configuring the Connection
 
 You can configure the connection by passing a `SocketConfig` object.
 
@@ -141,13 +141,13 @@ type SocketConfig = {
 }
 ```
 
-## Saving & Restoring Sessions
+### ☊  Saving & Restoring Sessions
 
 You obviously don't want to keep scanning the QR code every time you want to connect. 
 
 So, you can load the credentials to log back in:
 ``` ts
-import makeWASocket, { BufferJSON, useSingleFileAuthState } from '@adiwajshing/baileys'
+import makeWASocket, { BufferJSON, useSingleFileAuthState } from '@gascomit/jetpack'
 import * as fs from 'fs'
 
 // utility function to help save the auth state in a single file
@@ -162,9 +162,9 @@ sock.ev.on ('creds.update', saveState)
 
 **Note**: When a message is received/sent, due to signal sessions needing updating, the auth keys (`authState.keys`) will update. Whenever that happens, you must save the updated keys. Not doing so will prevent your messages from reaching the recipient & other unexpected consequences. The `useSingleFileAuthState` function automatically takes care of that, but for any other serious implementation -- you will need to be very careful with the key state management.
 
-## Listening to Connection Updates
+### ☊  Listening to Connection Updates
 
-Baileys now fires the `connection.update` event to let you know something has updated in the connection. This data has the following structure:
+Jetpack now fires the `connection.update` event to let you know something has updated in the connection. This data has the following structure:
 ``` ts
 type ConnectionState = {
 	/** connection is now open, connecting or closed */
@@ -185,9 +185,9 @@ type ConnectionState = {
 
 Note: this also offers any updates to the QR
 
-## Handling Events
+### ☊  Handling Events
 
-Baileys uses the EventEmitter syntax for events. 
+Jetpack uses the EventEmitter syntax for events. 
 They're all nicely typed up, so you shouldn't have any issues with an Intellisense editor like VS Code.
 
 The events are typed up in a type map, as mentioned here:
@@ -246,9 +246,9 @@ sock.ev.on('messages.upsert', ({ messages }) => {
 
 ```
 
-## Implementing a Data Store
+### ☊ Implementing a Data Store
 
-As mentioned earlier, Baileys does not come with a defacto storage for chats, contacts, messages. However, a simple in-memory implementation has been provided. The store listens for chat updates, new messages, message updates etc. to always have an up to date version of the data.
+As mentioned earlier, Jetpack does not come with a defacto storage for chats, contacts, messages. However, a simple in-memory implementation has been provided. The store listens for chat updates, new messages, message updates etc. to always have an up to date version of the data.
 
 It can be used as follows:
 
@@ -285,7 +285,7 @@ The store also provides some simple functions such as `loadMessages` that utiliz
 
 **Note:** I highly recommend building your own data store especially for MD connections, as storing someone's entire chat history in memory is a terrible waste of RAM.
 
-## Using the Legacy Version
+### ☊ Using the Legacy Version
 
 The API for the legacy and MD versions has been made as similar as possible so ya'll can switch between them seamlessly.
 
@@ -313,11 +313,11 @@ If you need a type representing either the legacy or MD version:
 import { AnyWASocket } from '@gascomit/jetpack'
 ```
 
-## Sending Messages
+### ☊ Sending Messages
 
 **Send all types of messages with a single function:**
 
-### Non-Media Messages
+### ☊  Non-Media Messages
 
 ``` ts
 import { MessageType, MessageOptions, Mimetype } from '@gascomit/jetpack'
@@ -407,7 +407,7 @@ const listMessage = {
 const sendMsg = await sock.sendMessage(id, listMessage)
 ```
 
-### Media Messages
+### ☊  Media Messages
 
 Sending media (video, stickers, images) is easier & more efficient than ever. 
 - You can specify a buffer, a local url or even a remote url.
@@ -475,7 +475,7 @@ const buttonMessage = {
 const sendMsg = await sock.sendMessage(id, templateMessage)
 ```
 
-### Notes
+### ☊  Notes
 
 - `id` is the WhatsApp ID of the person or group you're sending the message to. 
     - It must be in the format ```[country code][phone number]@s.whatsapp.net```, for example ```+19999999999@s.whatsapp.net``` for people. For groups, it must be in the format ``` 123456789-123345@g.us ```. 
@@ -494,7 +494,7 @@ const sendMsg = await sock.sendMessage(id, templateMessage)
                                     Do not enter this field if you want to automatically generate a thumb
                                 */
         mimetype: Mimetype.pdf, /* (for media messages) specify the type of media (optional for all media types except documents),
-                                    import {Mimetype} from '@adiwajshing/baileys'
+                                    import {Mimetype} from '@gascomit/jetpack'
                                 */
         fileName: 'somefile.pdf', // (for media messages) file name for the media
         /* will send audio messages as voice notes, if set to true */
@@ -506,14 +506,14 @@ const sendMsg = await sock.sendMessage(id, templateMessage)
         sendEphemeral: 'chat'
     }
     ```
-## Forwarding Messages
+### ☊ Forwarding Messages
 
 ``` ts
 const msg = getMessageFromStore('455@s.whatsapp.net', 'HSJHJWH7323HSJSJ') // implement this on your end
 await sock.sendMessage('1234@s.whatsapp.net', { forward: msg }) // WA forward the message!
 ```
 
-## Reading Messages
+### ☊  Reading Messages
 
 A set of message IDs must be explicitly marked read now. 
 Cannot mark an entire "chat" read as it were with Jetpack Web.
@@ -529,7 +529,7 @@ await sock.sendReadReceipt(id, participant, [messageID])
 
 The message ID is the unique identifier of the message that you are marking as read. On a `WAMessage`, the `messageID` can be accessed using ```messageID = message.key.id```.
 
-## Update Presence
+### ☊ Update Presence
 
 ``` ts
 await sock.sendPresenceUpdate('available', id) 
@@ -542,7 +542,7 @@ type WAPresence = 'unavailable' | 'available' | 'composing' | 'recording' | 'pau
 
 The presence expires after about 10 seconds.
 
-## Downloading Media Messages
+###☊ Downloading Media Messages
 
 If you want to save the media you received
 ``` ts
@@ -568,7 +568,7 @@ sock.ev.on('messages.upsert', async ({ messages }) => {
 }
 ```
 
-## Deleting Messages
+### ☊ Deleting Messages
 
 ``` ts
 const jid = '1234@s.whatsapp.net' // can also be a group
@@ -580,7 +580,7 @@ await sock.sendMessage(jid, { delete: response.key })
 
 Note: deleting for oneself is supported via `chatModify` (next section)
 
-## Modifying Chats
+### ☊ Modifying Chats
 
 WA uses an encrypted form of communication to send chat/app updates. This has been implemented mostly and you can send the following updates:
 
@@ -614,7 +614,7 @@ WA uses an encrypted form of communication to send chat/app updates. This has be
 
 Note: if you mess up one of your updates, WA can log you out of all your devices and you'll have to login again.
 
-## Disappearing Messages
+### ☊ Disappearing Messages
 
 ``` ts
 const jid = '1234@s.whatsapp.net' // can also be a group
@@ -634,7 +634,7 @@ await sock.sendMessage(
 
 ```
 
-## Misc
+### ☊  Misc
 
 - To check if a given ID is on WhatsApp
     ``` ts
@@ -681,7 +681,7 @@ await sock.sendMessage(
     ```
 Of course, replace ``` xyz ``` with an actual ID. 
 
-## Groups
+### ☊ Groups
 - To create a group
     ``` ts
     // title & participants
@@ -741,7 +741,7 @@ Of course, replace ``` xyz ``` with an actual ID.
     ```
     Of course, replace ``` xxx ``` with invitation code.
 
-## Broadcast Lists & Stories
+### ☊ Broadcast Lists & Stories
 
 **Note:** messages cannot be sent to broadcast lists from the MD version right now
 
@@ -754,8 +754,8 @@ Of course, replace ``` xyz ``` with an actual ID.
     console.log (`list name: ${bList.name}, recps: ${bList.recipients}`)
     ```
 
-## Writing Custom Functionality
-Baileys is written, keeping in mind, that you may require other custom functionality. Hence, instead of having to fork the project & re-write the internals, you can simply write extensions in your own code.
+### ☊ Writing Custom Functionality
+Jetpack is written, keeping in mind, that you may require other custom functionality. Hence, instead of having to fork the project & re-write the internals, you can simply write extensions in your own code.
 
 First, enable the logging of unhandled messages from WhatsApp by setting
 ``` ts
@@ -785,7 +785,7 @@ This will enable you to see all sorts of messages WhatsApp sends in the console.
     sock.ws.on(`CB:edge_routing,id:abcd,routing_info`, (node: BinaryNode) => { })
     ```
 
-### Note
+### ☊ Note
 
  This library was originally a project for **CS-2362 at Ashoka University** and is in no way affiliated with WhatsApp. Use at your own discretion. Do not spam people with this.
 
