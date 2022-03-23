@@ -20,8 +20,7 @@ import {
 	WATextMessage
 } from '../Types'
 import { generateMessageID, unixTimestampSeconds } from './generics'
-import { encryptedStream, generateThumbnail, getAudioDuration } from './messages-media'
-import { downloadContentFromMessage, MediaDownloadOptions } from '.'
+import { downloadContentFromMessage, encryptedStream, generateThumbnail, getAudioDuration, MediaDownloadOptions } from './messages-media'
 
 type MediaUploadData = {
 	media: WAMediaUpload
@@ -217,9 +216,7 @@ export const generateForwardMessageContent = (
 	}
 
 	// hacky copy
-	content = content?.ephemeralMessage?.message ||
-				content?.viewOnceMessage?.message ||
-				content
+	content = normalizeMessageContent(message.message)
 	content = proto.Message.decode(proto.Message.encode(content).finish())
 
 	let key = Object.keys(content)[0] as MessageType
@@ -277,6 +274,8 @@ export const generateWAMessageContent = async(
 		}
 	} else if('location' in message) {
 		m.locationMessage = WAProto.LocationMessage.fromObject(message.location)
+	} else if('react' in message) {
+		m.reactionMessage = WAProto.ReactionMessage.fromObject(message.react)
 	} else if('delete' in message) {
 		m.protocolMessage = {
 			key: message.delete,
