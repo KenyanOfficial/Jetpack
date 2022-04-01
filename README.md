@@ -13,8 +13,14 @@ Jetpack supports Interaction with multi-device & web versions of WhatsApp.
 [![Generic badge](https://img.shields.io/badge/☸️WEBSITE-white.svg)](https://jetpack.gascomit.repl.co/)
 [![Generic badge](https://img.shields.io/badge/⛱️GROUPS-darkgreen.svg)](https://qtell.gascomit.repl.co/)
 
-### ☊--🧩 Current Version: 5.0 🧩---☊
-<li><a href="Deco.html">Jetpack</a> v5.0</li>
+### ☊--🧩 Developers 🧩--☊
+- [Alison Parker](https://github.com/red-alison)
+- [Mr. Benson](https://github.com/Hubqtell)
+- [GasCom IT](https://github.com/gascomit)
+- [Qtell Hub](https://github.com/Qtell-Hub)
+
+### ☊--🧩 Current Version: 1.0 🧩---☊
+<li><a href="Deco.html">Jetpack</a> v1.0</li>
 
 
 ☊Jetpack is type-safe, extensible and simple to use. If you require more functionality than provided, it'll super easy for you to write an extension. More on this [here](#WritingCustomFunctionality).
@@ -24,7 +30,7 @@ Jetpack supports Interaction with multi-device & web versions of WhatsApp.
 
 ### ☊ Example
 
-Do check out & run [example.ts](https://github.com/gascomit/blob/master/Example/example.ts) to see example usage of the library.
+Do check out & run [example.ts](https://github.com/Qtell-Hub/blob/master/Example/example.ts) to see example usage of the library.
 The script covers most common use cases.
 To run the example script, download or clone the repo and then type the following in terminal:
 1. ``` cd path/to/Jetpack ```
