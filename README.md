@@ -102,7 +102,7 @@ If the connection is successful, you will see a QR code printed on your terminal
 
 **Note:** install `qrcode-terminal` using `yarn add qrcode-terminal` to auto-print the QR to the terminal.
 
-### ☊  Notable Differences Between Baileys v3 & v4
+### ☊  Notable Differences Between Jetpack v4 & v5
 
 1. Jetpack has been written from the ground up to have a more "functional" structure. This is done primarily for simplicity & more testability
 2. The Jetpack event emitter will emit all events and be used to generate a source of truth for the connected user's account. Access the event emitter using (`sock.ev`)
